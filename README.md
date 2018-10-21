@@ -34,7 +34,7 @@ And run:
 ```
 node server.js
 ```
-#### Copyright
+#### Copyrights
 The content in the brain folder is protected by copyright © 2018 Noah Petherbridge and it's taken from https://www.rivescript.com/try.
 
 If you want to know more read my article where I talk about it, on my [linkedin profile](https://www.linkedin.com/in/giovanni-marco-ferrara-6aa458137/)
