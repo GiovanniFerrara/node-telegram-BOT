@@ -1,0 +1,21 @@
+{
+  "name": "ferrarabot",
+  "version": "1.0.0",
+  "description": "App that connects a telegram bot with RiveScript to generate answers automatically",
+  "main": "server.js",
+  "dependencies": {
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "rivescript": "^2.0.0-alpha.6",
+    "telegraf": "^3.24.1",
+    "telegrambot": "^0.1.0",
+    "axios": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Giovanni Marco Ferrara",
+  "license": "ISC"
+}
