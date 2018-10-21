@@ -35,4 +35,4 @@ And run:
 node server.js
 ```
 
-If you want to know more read my article where I talk about it, on my [linkedin profile](https://www.linkedin.com/in/giovanni-marco-ferrara-6aa458137/)
+If you want to know more read my article where I talk about it, on my [linkedin article](https://www.linkedin.com/pulse/coding-telegram-bot-using-nodejs-giovanni-marco-ferrara/?fbclid=IwAR0JdoTDpWtl-39CNlntzXCSy8gZo6tLR1nYevmnFc1ckwaQ5TXKFslJgJg/)
