@@ -4,12 +4,12 @@
   "description": "App that connects a telegram bot with RiveScript to generate answers automatically",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "install": "^0.12.2",
-    "npm": "^6.4.1",
+    "npm": "^6.10.2",
     "rivescript": "^2.0.0-alpha.6",
     "telegraf": "^3.24.1",
-    "telegrambot": "^0.1.0",
-    "axios": "*"
+    "telegrambot": "^0.1.0"
   },
   "devDependencies": {},
   "scripts": {
