@@ -3,3 +3,4 @@ node_modules/
 server2.js
 modules/getLinks.js
 .vscode/
+./config

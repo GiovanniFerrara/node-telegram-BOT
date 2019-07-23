@@ -1,22 +1,21 @@
-const RiveScript = require ('rivescript');
+const RiveScript = require('rivescript');
 const bot = new RiveScript();
 const path = require('path');
-
 // Brain path
-const folderPath = path.join(__dirname,"../brain/standard.rive");
+const folderPath = path.join(__dirname, "../brain/standard.rive");
 
 // Initialize the app first
-function init(){
+function init() {
   //Load the files
   return bot.loadFile(folderPath).then(loadingDone).catch(loadingError);
 
-    // Asyncronusly start the program
+  // Asyncronusly start the program
   function loadingDone() {
-  console.log("Bot has finished loading!");
+    console.log("Bot has finished loading!");
     //Sort replies before
     bot.sortReplies();
   }
-  
+
   // Catch errors
   function loadingError(error, filename, lineno) {
     console.log("Error when loading files: " + error);
@@ -24,11 +23,11 @@ function init(){
 }
 
 // Ask function, must be called after botInit
-function ask(question,callback){
+function ask(question, callback) {
   bot.reply("local-user", question).then(
-    function(reply) {
-    // console.log("BOT>: " + reply);
-    return callback(reply);
+    function (reply) {
+      // console.log("BOT>: " + reply);
+      return callback(reply);
     }
   );
 }

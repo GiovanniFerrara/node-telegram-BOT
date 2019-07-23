@@ -1,12 +1,12 @@
 const Telegraf = require('telegraf');
 const bot = require('./modules/bot');
-const { token } = require('./config/keys');
+const { telegramToken } = require('./config/keys');
 const axios = require("axios");
+const Game = require('./services/Game')
 // Instance of Telegraf
-const chat = new Telegraf(token);
+const chat = new Telegraf(telegramToken);
 // Initialize bot
 bot.init()
-
 
 // Recieve a message
 chat.start((ctx) => ctx.reply('Hi mate, tell me how can I help you!'))
@@ -42,6 +42,28 @@ chat.hears(/planet (.+)/i, (ctx) => {
         )
 })
 
+// The chat is listening for message
+chat.hears(/player (.+)/i, (ctx) => {
+    let user = ctx.from.first_name;
+    let query = ctx.message.text.trim();
+    try {
+        // Get only the info about the planet choosen
+        query = query.split("").slice(("player ").split("").length).join("");
+    } catch (err) {
+        console.log(err)
+    }
+    console.log(query)
+    Game.getPlayers(query).then((res) => {
+        console.log(res.data)
+        if (res.data.length) {
+            let players = ''
+            res.data.forEach((item) => {
+                players += `${item.player_name}; `
+            })
+            return ctx.reply(players)
+        }
+    }).catch((e) => console.log(e))
+})
 
 // On non standard message responds the rivescript bot
 chat.on('message', (ctx) => {
